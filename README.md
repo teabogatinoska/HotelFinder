@@ -1,5 +1,5 @@
 # Домашна 3
 
-[link](https://hotelpedia20201220231057.azurewebsites.net)
+[линк](https://hotelpedia20201220231057.azurewebsites.net) од публикацијата
 
 Можна е промена најдоцна до утре, по консултации по маил со асистентката.

@@ -94,6 +94,12 @@ div.header > #one {
     margin-bottom: -110px;
     margin-left: 50px;
 }
+.topic > a:hover{
+    text-decoration: none !important;
+    font-weight: bold;
+    color: #ddd;
+
+}
 
 div.header > ul {
     margin-top: -40px;

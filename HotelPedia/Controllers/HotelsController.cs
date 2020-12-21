@@ -15,16 +15,17 @@ namespace HotelPedia.Controllers
     public class HotelsController : Controller
     {
         
-        private HotelPediaContext db = new HotelPediaContext();
+        //private HotelPediaContext db = new HotelPediaContext();
 
         // GET: Hotels
+        
         [HttpGet]
         public ActionResult HotelPedia()
         {
-            return View(db.Hotels.ToList());
+            return View();
         }
-
-
+        
+        
         [HttpPost]
         public ActionResult HotelPedia(string data)
         {
@@ -35,6 +36,7 @@ namespace HotelPedia.Controllers
             return View();
         
         }
+
 
 
         [HttpGet]
@@ -60,21 +62,22 @@ namespace HotelPedia.Controllers
         }
 
 
-
+        /*
         public ActionResult Index()
         {
             return View(db.Hotels.ToList());
         }
+        */
         public ActionResult Discover()
         {
-            return View(db.Hotels.ToList());
+            return View();
         }
-        public ActionResult About()
+        public ActionResult ABOUT()
         {
-            return View(db.Hotels.ToList());
+            return View();
         }
-
-
+        
+        /*
         // GET: Hotels/Details/5
         public ActionResult Details(long? id)
         {
@@ -178,5 +181,7 @@ namespace HotelPedia.Controllers
             }
             base.Dispose(disposing);
         }
+        */
     }
+
 }

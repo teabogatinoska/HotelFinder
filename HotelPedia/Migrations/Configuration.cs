@@ -5,6 +5,7 @@ namespace HotelPedia.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
+    /*
     internal sealed class Configuration : DbMigrationsConfiguration<HotelPedia.Data.HotelPediaContext>
     {
         public Configuration()
@@ -12,7 +13,7 @@ namespace HotelPedia.Migrations
             AutomaticMigrationsEnabled = false;
             ContextKey = "HotelPedia.Data.HotelPediaContext";
         }
-
+        
         protected override void Seed(HotelPedia.Data.HotelPediaContext context)
         {
             //  This method will be called after migrating to the latest version.
@@ -28,5 +29,7 @@ namespace HotelPedia.Migrations
             //    );
             //
         }
+       
     }
+    */
 }

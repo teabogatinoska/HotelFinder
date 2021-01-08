@@ -1,6 +1,7 @@
-﻿
+﻿//Se povikuva na body on load i se filtriraat sprema izbraniot broj na zvezdi i dolari izbrani na prethodnata strana
 function inicijalizacijaFunc() {
 
+    //So Cookie gi prenesuva vrednostite na izbranite zvezdi i dolari
     var brStars = getCookie("numStars");
     var brDollars = getCookie("cookieDollars");
 
@@ -9,6 +10,7 @@ function inicijalizacijaFunc() {
         document.getElementById("brojIzbraniZvezdi").innerHTML = brStars;
         document.getElementById("brojIzbraniDolari").innerHTML = brDollars;
 
+        //Se brisat cookies-ot 
         document.cookie = 'numStars=; Max-Age=0';
         document.cookie = 'cookieDollars=; Max-Age=0';
 
@@ -18,6 +20,8 @@ function inicijalizacijaFunc() {
         var zvezdi = document.getElementById("brojIzbraniZvezdi").innerHTML;
         var starsContainer = document.getElementById('stars');
         var checkboxes = starsContainer.querySelectorAll('span');
+
+        //Se prikazuva brojot na izbrani zvezdi i dolari vo html-ot
         for (var i = 4; i > zvezdi-1; i--) {
 
            checkboxes[i].classList.add('nevidliva');
@@ -29,7 +33,8 @@ function inicijalizacijaFunc() {
 
             checkDollar[i].classList.add('nevidliva');
         }
-        
+
+        //Se povikuva funckijata za filtriranje
         funcFilter(1);
     }
 
@@ -38,30 +43,25 @@ function inicijalizacijaFunc() {
 
 function funcFilter(nacinPovik) {
 
-    console.log("1. vleze vo funcFilter")
-
+    
+    //Se zema vrednosta na izbranite zvezdi i dolari
     var preneseni_stars = document.getElementById("brojIzbraniZvezdi").innerHTML.toString();
     var preneseni_dolars = document.getElementById("brojIzbraniDolari").innerHTML.toString();
 
-    console.log("2. preneseni stars = ")
-    console.log(preneseni_stars)
-    console.log("2. preneseni dollars = ")
-    console.log(preneseni_dolars)
-
+ 
+    //Se zemaat site hoteli
     var arrHotels = document.getElementsByClassName('oneHotel');
     var arrLength = arrHotels.length;
 
-    console.log("3. arrHotels:")
-    console.log(arrHotels);
-    console.log("3. arrLength:")
-    console.log(arrLength)
+    
 
-    if (nacinPovik === 1) {
+    /*if (nacinPovik === 1) {
         console.log("povikana od body onload")
     } else {
         console.log("povikana onclick")
-    }
+    }*/
 
+    //Se zema koi filtri se odbrani
     var checkboxes = document.querySelectorAll('input[name="filtri"]:checked');
 
     var vw_filters = [];        // vo vw_filters se site filtri od view
@@ -69,12 +69,8 @@ function funcFilter(nacinPovik) {
         vw_filters.push(checkbox.value);
     });
 
-    console.log("4. checkboxes:")
-    console.log(checkboxes)
-    console.log("4. vw_filters: ")
-    console.log(vw_filters)
-
-    var arr_rbr_hotel = [];
+    
+    var arr_rbr_hotel = []; //niza so rednite broevi na hotelite
 
     for (var i = 0; i < arrLength; i++) {
 
@@ -85,17 +81,17 @@ function funcFilter(nacinPovik) {
 
     for (var i = 0; i < arrLength; i++) {  // gi vrti hotelite
 
-        var rbr_hotel = arr_rbr_hotel[i];
-        var div_hotel = document.getElementById("hotel_" + rbr_hotel);
+        var rbr_hotel = arr_rbr_hotel[i]; // redniot broj na tekovniot hotel
+        var div_hotel = document.getElementById("hotel_" + rbr_hotel); //go zema div-ot na tekovniot hotel
 
-        var hotel_stars = div_hotel.querySelector('span[class=brStars]').textContent;
-        var hotel_dollars = div_hotel.querySelector('span[class=brPrice]').textContent;
+        var hotel_stars = div_hotel.querySelector('span[class=brStars]').textContent; //gi zema zvezdite na tekovniot hotel
+        var hotel_dollars = div_hotel.querySelector('span[class=brPrice]').textContent; //ja zema cenata na tekovniot hotel
 
         var FLAG_TRGNI_HOTEL = false;
 
         // 1. Proverka za stars i dollars izbrani od home page
         if (!FLAG_TRGNI_HOTEL) {
-
+            // Vleguva dokolku se sovpagjaat brojot na zvezdi i cenata so izbranite
             if (hotel_stars === preneseni_stars && hotel_dollars === preneseni_dolars) {
 
                 FLAG_TRGNI_HOTEL = false;
@@ -110,7 +106,7 @@ function funcFilter(nacinPovik) {
 
             for (var j = 0; j < vw_filters.length; j++) { // gi vrti selektiranite filtri
 
-                // eden_filter_hotel primer: "parking"
+                // eden_filter_hotel primer: "parking_1"
                 const eden_filter_hotel = document.getElementById(vw_filters[j] + "_" + rbr_hotel)
 
                 // specijalni slucai za distance od center i distance od airport, koi ne se bool-----------
@@ -187,61 +183,61 @@ function funcFilter(nacinPovik) {
 }
 
 
-
+//Funkcija za sortiranje na hoteli
 function funcSort() {
 
-    var arrHotels = document.getElementsByClassName('oneHotel');
+    var arrHotels = document.getElementsByClassName('oneHotel'); // niza od site hoteli
     var arrZaSort = [];
-
-    var sortOptions = document.getElementById('sortSelect');
-    var sortChoice = sortOptions.value;
+    
+    var sortOptions = document.getElementById('sortSelect'); // site mozni opcii za sortiranje
+    var sortChoice = sortOptions.value; // izbranata opcija za sortiranje
 
     var ii = 0;
 
+    // Se vrtat site hoteli
     for (var i = 0; i < arrHotels.length; i++) {
 
         ii = i + 1;
 
+        // proverka za koja opcija za sortiranje e izbrana
         if (sortChoice === "most_stars") {
 
-            var child = document.getElementById("brStars_" + ii)
-
-            //var child = arrHotels[i].querySelectorAll('.brStars');
-            
-            var sorterBy = 0 - child.innerHTML;
+            var child = document.getElementById("brStars_" + ii) // go zema span-ot koj ja sodrzi vrednosta na zvezdi
+            var sorterBy = 0 - child.innerHTML; // ja zema vrednosta na zvezdi
         }
         else if (sortChoice === "least_stars") {
-            var child = document.getElementById("brStars_" + ii)
-            var sorterBy = child.innerHTML;
+            var child = document.getElementById("brStars_" + ii) // go zema span-ot koj ja sodrzi vrednosta na zvezdi
+            var sorterBy = child.innerHTML; // ja zema vrednosta na zvezdi
         }
         else if (sortChoice === "lowest_price") {
-            var child = document.getElementById("brPrice_" + ii)
-            var sorterBy = child.innerHTML;
+            var child = document.getElementById("brPrice_" + ii) // go zema span-ot koj ja sodrzi vrednosta na cena
+            var sorterBy = child.innerHTML; // ja zema vrednosta na dolari
         }
         else if (sortChoice === "highest_price") {
-            var child = document.getElementById("brPrice_" + ii)
-            var sorterBy = 0 - child.innerHTML;
+            var child = document.getElementById("brPrice_" + ii) // go zema span-ot koj ja sodrzi vrednosta na cena
+            var sorterBy = 0 - child.innerHTML; // ja zema vrednosta na dolari
         }
         else if (sortChoice === "center_closest") {
-            var child = document.getElementById("distCenter1_" + ii)
-            var sorterBy = child.innerHTML;
+            var child = document.getElementById("distCenter1_" + ii); // go zema span-ot koj ja sodrzi vrednosta na odalecenosta od centar
+            var sorterBy = parseFloat(child.innerHTML.toString()); // ja zema vrednosta na odalecenosta od centar
         }
         else if (sortChoice === "airport_closest") {
-            var child = document.getElementById("distAirport_" + ii)
-            var sorterBy = child.innerHTML;
+            var child = document.getElementById("distAirport_" + ii) // go zema span-ot koj ja sodrzi vrednosta na odalecenosta od aerodrom
+            var sorterBy = child.innerHTML; // ja zema vrednosta na odalecenosta od aerodrom
         }
         else if (sortChoice === "az") {
-            var child = document.getElementById("imeAngHotel_" + ii)
-            var sorterBy = child.innerHTML;
+            var child = document.getElementById("imeAngHotel_" + ii) // go zema span-ot koj go sodrzi imeto na hotelot
+            var sorterBy = child.innerHTML; // go zema imeto na hotelot
         }
         else {
-            var child = document.getElementById("imeAngHotel_" + ii)
-            var sorterBy = child.innerHTML;
+            var child = document.getElementById("imeAngHotel_" + ii) // go zema span-ot koj go sodrzi imeto na hotelot
+            var sorterBy = child.innerHTML; // go zema imeto na hotelot
         }
 
-        arrZaSort.push([sorterBy, arrHotels[i]]);
+        arrZaSort.push([sorterBy, arrHotels[i]]); //se polni arrZaSort so vrednostite i span-ovite kade se naogjaat vrednostite
     }
 
+    // Opsta funckija za sortiranje
     arrZaSort.sort(function (a, b) {
 
         if (a[0] === b[0]) {
@@ -256,12 +252,26 @@ function funcSort() {
     console.log(arrZaSort);
 
     var hoteliContainer = document.getElementsByClassName("hoteliContainer")
-    var conteinerDiv = hoteliContainer[0]
+    console.log("hoteliContainer");
+    console.log(hoteliContainer);
+
+    
+    var conteinerDiv = hoteliContainer[0];
+    console.log("CD");
+    console.log(conteinerDiv);
     conteinerDiv.innerHTML = ""
+    console.log("ARRZASORT");
+    console.log(arrZaSort);
 
     for (var i = 0; i < arrZaSort.length; i++) {
+
+        //if (arrZaSort[i])
         conteinerDiv.append(arrZaSort[i][1]);
+        console.log("arr");
+        console.log(arrZaSort[i][1]);
     }
+    console.log("CD");
+    console.log(conteinerDiv);
 
 }
 

@@ -50,24 +50,13 @@ namespace HotelPedia.Controllers
 
             JavaScriptSerializer ser = new JavaScriptSerializer();
             var hotelList = ser.Deserialize<List<Hotel>>(json);
-/*
-            if (TempData.ContainsKey("name"))
-               // name = TempData["name"].ToString(); // returns "Bill" 
 
-            if (ViewBag.ContainsKey("Message"))
-                //Message = ViewBag["Message"].ToString(); // returns "Bill" 
-*/
 
             return View(hotelList);
         }
 
 
-        /*
-        public ActionResult Index()
-        {
-            return View(db.Hotels.ToList());
-        }
-        */
+        
         public ActionResult Discover()
         {
             return View();

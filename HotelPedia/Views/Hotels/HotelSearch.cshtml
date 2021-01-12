@@ -42,9 +42,9 @@
             <span class="fa fa-star checked"></span>
             <span class="fa fa-star checked"></span>
         </span>
-       
-       <input type="button" value="Filter" class="btnSearch btnSearch2" id="btnFilter" onclick="funcFilter(2)" />
-       
+
+        <input type="button" value="Filter" class="btnSearch btnSearch2" id="btnFilter" onclick="funcFilter(2)" />
+
         <div id="checkbox">
 
             <label class="containerCheckbox">
@@ -108,7 +108,7 @@
                 <input type="checkbox" name="filtri" value="distAirport">
                 <span class="checkmark"></span>
             </label>
-            <br/>
+            <br />
         </div>
 
 
@@ -129,12 +129,12 @@
     <input type="text" placeholder="Search by name" name="search" id="searchinput">
     <button type="submit" id="idsubmit"><i class="fa fa-search"></i></button>
 
-    <div class="hoteliContainer">
+    <div class="hoteliContainer" id="hoteliContainerId">
 
-        <div style="display:none" id="newcontainer">
-            <div style="display:none" id="newcontainerFilters"></div>
-        </div>
-
+        @*<div style="display:none" id="newcontainer">
+                <div style="display:none" id="newcontainerFilters"></div>
+            </div>
+        *@
         @foreach (var item in Model)
         {
             <div class="oneHotel pokaziHotel" id="hotel_@Html.DisplayFor(modelItem => item.id)">
@@ -166,6 +166,9 @@
                     <span class="brPrice" id="brPrice_@Html.DisplayFor(modelItem => item.id)" style="font-style: italic; color: #E0B15E; display:none">@Html.DisplayFor(modelItem => item.price)</span><br><br>
 
                     <span style="display:none">
+
+                        <span class="idhotel" id="id_@Html.DisplayFor(modelItem => item.id)">@Html.DisplayFor(modelItem => item.id)</span>
+
                         <span id="breakfast_@Html.DisplayFor(modelItem => item.id)">breakfast: @Html.DisplayFor(modelItem => item.breakfast_included)</span>
                         <span id="parking_@Html.DisplayFor(modelItem => item.id)">parking: @Html.DisplayFor(modelItem => item.parking)</span>
                         <span id="free_cancellation_@Html.DisplayFor(modelItem => item.id)">@Html.DisplayFor(modelItem => item.free_cancellation)</span>
@@ -186,7 +189,7 @@
                             @Html.DisplayFor(modelItem => item.email)
                         </a>
                     </span>
-                    <br/>
+                    <br />
                     <span>
                         phone: <a href="callto:@Url.Content(item.phone)" style="color: dodgerblue; font-weight: bold; font-size:13px">
                             @Html.DisplayFor(modelItem => item.phone)

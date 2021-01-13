@@ -292,38 +292,31 @@ function funcSort() {
     document.getElementById("hoteliContainerId").innerHTML = strAll;
 }
 
-
 document.getElementById("idsubmit").addEventListener("click", function () {
 
-    var arrHotels = document.getElementsByClassName('oneHotel');
-    var arrNewHotels = [...arrHotels];
+    var arrHotels = document.getElementsByClassName('oneHotel'); // niza od site hoteli
 
-    var searchinput = document.getElementById("searchinput").value;
-    var nameEN = document.getElementsByClassName('imeAngHotel');
-    var nameMK = document.getElementsByClassName('imeMkHotel');
+    var searchinput = document.getElementById("searchinput").value.toLowerCase(); // search input
 
-    var arrResult = [];
+    var angIme = "";
+    var mkIme = "";
+    var ii = 0;
 
-    for (var i = 0; i < arrNewHotels.length; i++) {
+    for (var i = 0; i < arrHotels.length; i++) {
 
-        if (nameEN[i].textContent.toLowerCase().includes(searchinput) || nameMK[i].textContent.toLowerCase().includes(searchinput)) {
-            arrResult.push(arrNewHotels[i]);
-        }
+        ii = i + 1;
+        angIme = document.getElementById("imeAngHotel_" + ii).innerText;
+        mkIme = document.getElementById("imeMkHotel_" + ii).innerText;
+
+        if (angIme.toLowerCase().includes(searchinput) || mkIme.toLowerCase().includes(searchinput)) {
+
+            arrHotels[i].classList.remove("sokrienDiv");  // pazi!!! ne smee da se referencira array so remove so classList
+            arrHotels[i].classList.add("pokaziHotel");
+        } else {
+            arrHotels[i].classList.remove("pokaziHotel");
+            arrHotels[i].classList.add("sokrienDiv");  // pazi!!! ne smee da se referencira array so remove so classList
+        }   
     }
-
-    var innerhtml = "";
-
-    for (var i = 0; i < arrResult.length; i++) {
-        innerhtml += arrResult[i].innerHTML;
-    }
-
-    var newcontainerFilters = document.getElementById("newcontainerFilters");
-    newcontainerFilters.style.display = "inline";
-
-    newcontainer.innerHTML = "";
-    newcontainer.innerHTML = innerhtml;
-
-    newcontainer.append(newcontainerFilters);
 
 });
 

@@ -488,6 +488,17 @@ sortFilterContainer > #checkbox {
     margin-bottom: 20px;
 }
 
+.noHotelsMatchVisible {
+    height: 50px;
+    padding-right: 200px;
+}
+
+.noHotelsMatchInvisible {
+    height: 0;
+    padding-right:  0;
+    overflow: hidden;
+}
+
 .divImg, .divInfo {
     float: left;
 }

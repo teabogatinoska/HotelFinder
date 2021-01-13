@@ -43,17 +43,15 @@ function inicijalizacijaFunc() {
 
 function funcFilter(nacinPovik) {
 
-
     //Se zema vrednosta na izbranite zvezdi i dolari
     var preneseni_stars = document.getElementById("brojIzbraniZvezdi").innerHTML.toString();
     var preneseni_dolars = document.getElementById("brojIzbraniDolari").innerHTML.toString();
-
 
     //Se zemaat site hoteli
     var arrHotels = document.getElementsByClassName('oneHotel');
     var arrLength = arrHotels.length;
 
-
+    var flag_imaHotel = false;
 
     /*if (nacinPovik === 1) {
         console.log("povikana od body onload")
@@ -175,11 +173,22 @@ function funcFilter(nacinPovik) {
             div_hotel.classList.add("sokrienDiv");
 
         } else {
+            flag_imaHotel = true;
+
             div_hotel.classList.remove("sokrienDiv");  // pazi!!! ne smee da se referencira array so remove so classList
             div_hotel.classList.add("pokaziHotel");
         }
 
     } // end of for (var i = 0; i < arrLength; i++) {  // gi vrti hotelite
+
+    if (!flag_imaHotel) { // nema nieden hotel koj go ispolnuva uslovot
+        document.getElementById("noHotelsMatch").classList.remove("noHotelsMatchInvisible");
+        document.getElementById("noHotelsMatch").classList.add("noHotelsMatchVisible");
+    } else {
+        document.getElementById("noHotelsMatch").classList.remove("noHotelsMatchVisible");
+        document.getElementById("noHotelsMatch").classList.add("noHotelsMatchInvisible");
+    }
+
 }
 
 
@@ -301,6 +310,7 @@ document.getElementById("idsubmit").addEventListener("click", function () {
     var angIme = "";
     var mkIme = "";
     var ii = 0;
+    var flag_imaHotel = false;
 
     for (var i = 0; i < arrHotels.length; i++) {
 
@@ -310,14 +320,44 @@ document.getElementById("idsubmit").addEventListener("click", function () {
 
         if (angIme.toLowerCase().includes(searchinput) || mkIme.toLowerCase().includes(searchinput)) {
 
+            flag_imaHotel = true;
             arrHotels[i].classList.remove("sokrienDiv");  // pazi!!! ne smee da se referencira array so remove so classList
             arrHotels[i].classList.add("pokaziHotel");
+            
         } else {
             arrHotels[i].classList.remove("pokaziHotel");
             arrHotels[i].classList.add("sokrienDiv");  // pazi!!! ne smee da se referencira array so remove so classList
         }   
     }
 
+
+    if (!flag_imaHotel) { // nema nieden hotel koj go ispolnuva uslovot
+        document.getElementById("noHotelsMatch").classList.remove("noHotelsMatchInvisible");
+        document.getElementById("noHotelsMatch").classList.add("noHotelsMatchVisible");
+    } else {
+        document.getElementById("noHotelsMatch").classList.remove("noHotelsMatchVisible");
+        document.getElementById("noHotelsMatch").classList.add("noHotelsMatchInvisible");
+    }
+
+});
+
+document.getElementById("btnClearFilters").addEventListener("click", function () {
+
+    var arrHotels = document.getElementsByClassName('oneHotel'); // niza od site hoteli
+
+    for (var i = 0; i < arrHotels.length; i++) {
+        arrHotels[i].classList.remove("sokrienDiv");  // pazi!!! ne smee da se referencira array so remove so classList
+        arrHotels[i].classList.add("pokaziHotel");
+    }
+
+    //Resetiranje checked filtri
+    //Se zema koi filtri se odbrani
+    var checkboxes = document.querySelectorAll('input[name="filtri"]:checked');
+
+    checkboxes.forEach((checkbox) => {
+        
+        checkbox.checked = false;
+    });
 });
 
 

@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  starsdollarsmicroservice:
+    image: ${DOCKER_REGISTRY-}starsdollarsmicroservice
+    build:
+      context: .\StarsDollarsMicroservice
+      dockerfile: Dockerfile

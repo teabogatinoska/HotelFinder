@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29911.84
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortMicroservice", "SortMicroservice\SortMicroservice.csproj", "{D59341E0-019E-433A-97DD-026E775D9066}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarsDollarsMicroservice", "StarsDollarsMicroservice\StarsDollarsMicroservice.csproj", "{28CCC70C-4225-4DCF-892E-CD8A9D73DFDC}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A16D0EB9-7851-4F8C-A957-BF51E57400F5} = {A16D0EB9-7851-4F8C-A957-BF51E57400F5}
+		{D2076FC4-9B32-4944-A44C-7F8B3AD5A87A} = {D2076FC4-9B32-4944-A44C-7F8B3AD5A87A}
+		{D59341E0-019E-433A-97DD-026E775D9066} = {D59341E0-019E-433A-97DD-026E775D9066}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelsFilterMicroservice", "HotelsFilterMicroservice\HotelsFilterMicroservice.csproj", "{D2076FC4-9B32-4944-A44C-7F8B3AD5A87A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiscoverAboutMicroservice", "DiscoverAboutMicroservice\DiscoverAboutMicroservice.csproj", "{A16D0EB9-7851-4F8C-A957-BF51E57400F5}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{F4E29858-3B03-4824-B3BD-DAF020413A11}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D59341E0-019E-433A-97DD-026E775D9066}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D59341E0-019E-433A-97DD-026E775D9066}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D59341E0-019E-433A-97DD-026E775D9066}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D59341E0-019E-433A-97DD-026E775D9066}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28CCC70C-4225-4DCF-892E-CD8A9D73DFDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28CCC70C-4225-4DCF-892E-CD8A9D73DFDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28CCC70C-4225-4DCF-892E-CD8A9D73DFDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28CCC70C-4225-4DCF-892E-CD8A9D73DFDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2076FC4-9B32-4944-A44C-7F8B3AD5A87A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2076FC4-9B32-4944-A44C-7F8B3AD5A87A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2076FC4-9B32-4944-A44C-7F8B3AD5A87A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2076FC4-9B32-4944-A44C-7F8B3AD5A87A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A16D0EB9-7851-4F8C-A957-BF51E57400F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A16D0EB9-7851-4F8C-A957-BF51E57400F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A16D0EB9-7851-4F8C-A957-BF51E57400F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A16D0EB9-7851-4F8C-A957-BF51E57400F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4E29858-3B03-4824-B3BD-DAF020413A11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4E29858-3B03-4824-B3BD-DAF020413A11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4E29858-3B03-4824-B3BD-DAF020413A11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4E29858-3B03-4824-B3BD-DAF020413A11}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {57AB7D4F-8257-44D3-8A8C-CA89CE572AF1}
+	EndGlobalSection
+EndGlobal

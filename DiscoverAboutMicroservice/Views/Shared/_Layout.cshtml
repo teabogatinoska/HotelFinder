@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>@ViewBag.Title - HotelPedia</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+
+    <div class="glavenDiv">
+
+        <div class="headerDiv">
+            <div class="header">
+                <p id="one"></p>
+                <div class ="topic" style="margin-left: 100px;padding-bottom: 50px;margin-top: -130px;">
+                    @Html.ActionLink("HOME", "HotelPedia", "StarsDollarsSort") @Html.ActionLink("HOTEL SEARCH", "HotelSearch", "Sort")
+                    @Html.ActionLink("DISCOVER", "Discover", "DiscoverAbout") @Html.ActionLink("ABOUT", "About", "DiscoverAbout")
+                </div>
+                @*
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("HOME", "HotelPedia", "Hotels")</li>
+                    <li>@Html.ActionLink("HOTEL SEARCH", "HotelSearch", "Hotels")</li>
+                    <li>@Html.ActionLink("DISCOVER", "Discover", "Hotels")</li>
+                    <li>@Html.ActionLink("ABOUT", "ABOUT", "Hotels")</li>
+                    
+                </ul>
+                    *@
+            </div>
+
+            <div class="body1">
+                <p id="two">HotelPedia<br>Skopje</p>
+            </div>
+
+        </div>
+
+        <div class="bodyDiv">
+
+            @RenderBody()
+
+        </div>
+
+    </div>
+
+
+    <footer>
+        <p>&copy; @DateTime.Now.Year - HotelPedia</p>
+    </footer>
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

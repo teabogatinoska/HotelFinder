@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Montserrat:wght@100;700&family=Spartan:wght@800&display=swap');
+
+.header{
+    background-color: #132540;
+    text-align: center;
+    padding: 10px;
+    height: 80px;
+}
+body{
+    margin: 0;
+    background-size: cover;
+}
+a{
+    text-decoration: none;
+    color: #F6F6F6;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+    font-size: 18px;
+    padding: 11px;
+
+}
+div.header>#a{
+    margin-top: -150px;
+    margin-left: 450px;
+}
+div.header>#one{
+    background-color: #E0B15E;
+    width: 190px;
+    height: 220px;
+    margin-top: -50px;
+    margin-bottom: -110px;
+    margin-left: 50px
+}
+div.header>p{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 56px;
+    color: #F6F6F6;
+    background: transparent;
+    width: 500px;
+    margin-left: 60px;
+    margin-top: 90px;
+}
+div.body1>p{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 56px;
+    color: #F6F6F6;
+    background: transparent;
+    width: 500px;
+    margin-left: 60px;
+    margin-top: 90px;
+
+}
+div.body1>#two{
+    font-family: 'Spartan', sans-serif;
+    font-weight: 800;
+    font-size: 26px;
+    text-align: left;
+    color: #F6F6F6;
+    margin-left: 77px;
+    margin-top: 0px;
+
+
+}
+
+body{
+    margin:0;
+    background-color: #F6F6F6;
+
+}
+
+.checked {
+    color: orange;
+}
+.unchecked{
+    color: grey;
+}
+div.body2{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+    background-color: #EBE5E5;
+    width: 190px;
+    margin-left: 60px;
+    margin-top: 70px;
+    line-height: 1.9em;
+    height: 400px;
+    color: dimgrey;
+}
+div.body2>#stars{
+    margin-left:40px;
+
+}
+
+div.body2>#checkbox{
+    margin-left: 15px;
+}
+div.marriott{
+    background: #FFFFFF;
+    width: 700px;
+    height: 260px;
+    margin-left: 330px;
+    margin-top: -420px;
+    line-height: 1.6em;
+    font-family: 'Montserrat', sans-serif;
+}
+div.marriott>#marriott{
+    width: auto;
+    height: 200px;
+    padding: 30px;
+
+}
+div.marriott>#M{
+    margin-left: 250px;
+    margin-top: -240px;
+}
+
+
+
+div.park{
+    background: #FFFFFF;
+    width: 700px;
+    height: 270px;
+    margin-left: 330px;
+    margin-top: 50px;
+    line-height: 1.6em;
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    font-weight: normal;
+}
+div.park>#park{
+    width: 200px;
+    height: 150px;
+    padding: 30px;
+
+}
+div.park>#P{
+    margin-left: 250px;
+    margin-top: -190px;
+}
+
+div.visit{
+    background: #EBE5E5;
+    width: 310px;
+    padding: 10px;
+    margin-left: 1100px;
+    margin-top: -900px;
+}
+div.visit>#zname{
+    width: auto;
+    height: 30px;
+
+}
+div.visit>#spomenik{
+    width: auto;
+    height: 100px;
+
+}
+
+div.visit>#most{
+    width: auto;
+    height: 100px;
+
+}
+
+div.visit>#carsija{
+    width: auto;
+    height: 100px;
+
+}
+
+div.visit>#kale{
+    width: auto;
+    height: 100px;
+
+}
+div.arka{
+    background: #FFFFFF;
+    width: 700px;
+    height: 270px;
+    margin-left: 330px;
+    margin-top: 50px;
+    line-height: 1.6em;
+    font-family: 'Montserrat', sans-serif;
+}
+div.arka>#arka{
+    width: 200px;
+    height: 150px;
+    padding: 30px;
+
+}
+div.arka>#AA{
+    margin-left: 250px;
+    margin-top: -190px;
+}

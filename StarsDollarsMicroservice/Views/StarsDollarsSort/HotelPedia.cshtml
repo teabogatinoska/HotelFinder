@@ -1,0 +1,56 @@
+﻿@model IEnumerable<StarsDollarsMicroservice.Models.Hotel>
+
+@{
+    ViewBag.Title = "HotelPedia";
+}
+<form id="1" runat="server"></form>
+<head>
+    <meta charset="UTF-8">
+    <link href="~/Content/HomePage.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <!-- Font Awesome Icon Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
+    <script type="text/javascript" src="~/Content/HotelPediaJS.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+<body>
+
+    <div class="find-the-best-hotels">
+        <p>Find the <br> best hotels <br> in Skopje, <br> Macedonia</p>
+    </div>
+
+    <div class="slidecontainer">
+
+        <input type="range" min="0" max="3" value="0" class="slider" id="myRange"><br />
+        <p><span id="demo"></span></p>
+
+        <fieldset class="rating">
+            <input type="radio" id="star5" name="rating" value="5" /><label class="full" for="star5" title="Awesome - 5 stars"></label>
+            <input type="radio" id="star4" name="rating" value="4" /><label class="full" for="star4" title="Pretty good - 4 stars"></label>
+            <input type="radio" id="star3" name="rating" value="3" /><label class="full" for="star3" title="Meh - 3 stars"></label>
+            <input type="radio" id="star2" name="rating" value="2" /><label class="full" for="star2" title="Kinda bad - 2 stars"></label>
+            <input type="radio" id="star1" name="rating" value="1" /><label class="full" for="star1" title="Sucks big time - 1 star"></label>
+        </fieldset>
+
+        <div id="brIzbraniStars" style="display:none">v</div>
+
+
+        <div class="btnSearchContainer" id="btnSubmitSearch">
+            <input type="button" value="Search" onclick="location.href='@Url.Action("HotelSearch", "StarsDollarsSort")'" class="btn btnSearch" />
+
+        </div>
+
+
+
+    </div>
+
+
+    <script src="~/Content/DollarRangeSelect.js"></script>
+
+</body>
+
+

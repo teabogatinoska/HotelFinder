@@ -15,105 +15,8 @@
 
 
     <div class="sortFilterContainer">
-
-
-
-        <input type="button" value="Clear" id="btnClear" style="display: none" />
-
-        <br>
-
-        <div id="brojIzbraniZvezdi" style="display:none"></div>
-
-        <div id="brojIzbraniDolari" style="display:none"></div>
-
-
-
-
-        <span id="dollarz" style="text-align: left">
-            <span class="dollarz1">$</span>
-            <span class="dollarz1">$</span>
-            <span class="dollarz1">$</span>
-        </span>
-        <br />
-        <span id="stars" style="text-align: left">
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-        </span>
-
-        @*
-        <input type="button" value="Filter" class="btnSearch btnSearch2" id="btnFilter" onclick="funcFilter(2)" />
-
-        <div id="checkbox">
-
-            <label class="containerCheckbox">
-                Breakfast included
-                <input type="checkbox" name="filtri" value="breakfast">
-                <span class="checkmark"></span>
-            </label>
-            <label class="containerCheckbox">
-                Free parking
-                <input type="checkbox" name="filtri" value="parking">
-                <span class="checkmark"></span>
-            </label>
-            <label class="containerCheckbox">
-                Free cancellation
-                <input type="checkbox" name="filtri" value="free_cancellation">
-                <span class="checkmark"></span>
-            </label>
-            <label class="containerCheckbox">
-                Wi-fi
-                <input type="checkbox" name="filtri" value="wifi">
-                <span class="checkmark"></span>
-            </label>
-            <label class="containerCheckbox">
-                Swimming pool
-                <input type="checkbox" name="filtri" value="swimming_pool">
-                <span class="checkmark"></span>
-            </label>
-            <label class="containerCheckbox">
-                No smoking
-                <input type="checkbox" name="filtri" value="smoking">
-                <span class="checkmark"></span>
-            </label>
-            <label class="containerCheckbox">
-                Wheelchair accessible
-                <input type="checkbox" name="filtri" value="disabled_guest">
-                <span class="checkmark"></span>
-            </label>
-            <label class="containerCheckbox">
-                Pets
-                <input type="checkbox" name="filtri" value="pets">
-                <span class="checkmark"></span>
-            </label>
-
-            Distance from center<br>
-
-            <label class="containerCheckbox">
-                < 1 km
-                <input type="checkbox" name="filtri" value="distCenter1">
-                <span class="checkmark"></span>
-            </label>
-            <label class="containerCheckbox">
-                < 2 km
-                <input type="checkbox" name="filtri" value="distCenter2">
-                <span class="checkmark"></span>
-            </label>
-
-            Distance from airport<br>
-
-            <label class="containerCheckbox">
-                < 25 km
-                <input type="checkbox" name="filtri" value="distAirport">
-                <span class="checkmark"></span>
-            </label>
-            <br />
-        </div>
-
-            *@
-    </div>
+         <input type="button" value="Clear" id="btnClear" style="display: none" />
+           </div>
 
     
     <select id="sortSelect" name="sortSelect" onchange="funcSort()">
@@ -136,10 +39,6 @@
 
     <div class="hoteliContainer" id="hoteliContainerId">
 
-        @*<div style="display:none" id="newcontainer">
-                <div style="display:none" id="newcontainerFilters"></div>
-            </div>
-        *@
         @foreach (var item in Model)
         {
             <div class="oneHotel pokaziHotel" id="hotel_@Html.DisplayFor(modelItem => item.id)">

@@ -125,8 +125,11 @@
         <option value="airport_closest">Closest to airport</option>
         <option value="az">A-Z</option>
     </select>
-
+   
+    <label class="inp">
     <input type="text" placeholder="Search by name" name="search" id="searchinput">
+    <span class="focus-bg"></span>
+    </label>
     <button type="submit" id="idsubmit"><i class="fa fa-search"></i></button>
 
 
@@ -201,7 +204,7 @@
                     <br>
                     <div class="containerAddrVisit">
                         <span class="addressInfo">Address: @Html.DisplayFor(modelItem => item.street)</span>
-                        <span class="visitInfo"> <a href="https://www.booking.com/hotel/mk/skopje-marriott.en-gb.html?label=gen173nr-1FCAEoggI46AdIM1gEaJMBiAEBmAEJuAEXyAEM2AEB6AEB-AELiAIBqAIDuAKqnLP-BcACAdICJDFhZTUwZTEzLWM2MWEtNGZkMy1hMThjLTM1Mjg2NDQzNThiZNgCBuACAQ;sid=ba20b04e5be2c24cdace5b226ef2cf85;dest_id=-95841;dest_type=city;dist=0;group_adults=3;group_children=0;hapos=1;hpos=1;no_rooms=1;req_adults=3;req_children=0;room1=A%2CA%2CA;sb_price_type=total;sr_order=popularity;srepoch=1607257651;srpvid=aebb579925ce00bd;type=total;ucfs=1&#hotelTmpl" style="color: #E0B15E; font-weight: bold; font-size:13px; font-style: italic">-> visit on booking.com </a></span>
+                        <span class="visitInfo"> <a href=@Url.Content(item.website) style="color: #E0B15E; font-weight: bold; font-size:13px; font-style: italic">-> visit on website.com </a></span>
 
                     </div>
                 </div>

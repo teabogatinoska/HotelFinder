@@ -171,6 +171,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
+    <Content Include="Content\About.css" />
+    <Content Include="Content\AboutJS.js" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />
     <Content Include="Content\bootstrap-reboot.min.css" />
@@ -178,6 +180,8 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Discover.css" />
+    <Content Include="Content\DiscoverJS.js" />
     <Content Include="Content\Dollar.png" />
     <Content Include="Content\dollar1.jpg" />
     <Content Include="Content\DollarRangeSelect.js" />
@@ -270,6 +274,8 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\StarsDollarsSort\HotelPedia.cshtml" />
     <Content Include="Views\StarsDollarsSort\HotelSearch.cshtml" />
+    <Content Include="Views\StarsDollarsSort\About.cshtml" />
+    <Content Include="Views\StarsDollarsSort\Discover.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

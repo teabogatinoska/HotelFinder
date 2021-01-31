@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Montserrat:wght@100;700&family=Spartan:wght@800&display=swap');
+
+.header {
+    background-color: #132540;
+    text-align: center;
+    padding: 10px;
+    height: 80px;
+}
+
+body {
+    margin: 0;
+    background-size: cover;
+}
+
+a {
+    text-decoration: none;
+    color: #F6F6F6;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+    font-size: 18px;
+    padding: 11px;
+}
+
+div.header > #a {
+    margin-top: -150px;
+    margin-left: 450px;
+}
+
+div.header > #one {
+    background-color: #E0B15E;
+    width: 190px;
+    height: 220px;
+    margin-top: -50px;
+    margin-bottom: -110px;
+    margin-left: 50px
+}
+
+div.header > p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 56px;
+    color: #F6F6F6;
+    background: transparent;
+    width: 500px;
+    margin-left: 60px;
+    margin-top: 90px;
+}
+
+div.body1 > #two {
+    font-family: 'Spartan', sans-serif;
+    font-weight: 800;
+    font-size: 26px;
+    text-align: left;
+    color: #F6F6F6;
+    margin-left: 77px;
+    margin-top: 0px;
+}
+
+body {
+    background: #F6F6F6;
+}
+
+div.body1 > #things {
+    font-family: 'Spartan', sans-serif;
+    color: #c9bbe0;
+    font-size: 35px;
+    font-style: oblique;
+    margin-left: 414px;
+
+}
+
+div.visit {
+    background: #EBE5E5;
+    width: 310px;
+    padding: 10px;
+    margin-left: 1100px;
+   
+}
+
+    div.visit > #zname {
+        width: auto;
+        height: 30px;
+        margin-top: 220px;
+        float: right;
+        margin-right: -210px;
+    }
+
+    div.visit > #spomenik {
+        width: 200px;
+        height: 100px;
+        margin-right: -200px;
+    }
+
+    div.visit > span {
+        float: right;
+        margin-top: 220px;
+        margin-right: 50px;
+    }
+
+    div.visit > #most {
+        width: 200px;
+        height: 200px;
+        margin-right: 100px;
+    }
+
+    div.visit > #carsija {
+        width: 200px;
+        height: 100px;
+    }
+
+    div.visit > #kale {
+        width: 200px;
+        height: 100px;
+    }
+
+div.images {
+    float: right;
+    width: 350px;
+    height: 200px
+}
+
+div.images1 {
+    margin-left: 170px;
+    width: 185px;
+}
+div.images2 {
+    margin-left: 170px;
+    width: 185px;
+}
+
+
+div.left {
+    float: left;
+}
+
+div.old {
+    font-family: 'Spartan', sans-serif;
+    background-color: #FFFFFF;
+    //width: 1000px;
+    margin-left: 60px;
+    margin-top: 1000px;
+    padding: 20px
+}
+
+    div.old > #old {
+        width: auto;
+        height: 300px;
+    }
+
+    div.old > #old1 {
+        width: auto;
+        height: 300px;
+    }
+
+div.holocaust {
+    font-family: 'Spartan', sans-serif;
+    background-color: #FFFFFF;
+    width: 1000px;
+    margin-left: 60px;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+    div.holocaust > #holocaust1 {
+        width: auto;
+        height: 300px;
+    }
+
+    div.holocaust > #holocaust2 {
+        width: auto;
+        height: 300px;
+    }
+
+div.matka {
+    font-family: 'Spartan', sans-serif;
+    background-color: #FFFFFF;
+    width: 1000px;
+    margin-left: 60px;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+    div.matka > #matka1 {
+        width: 450px;
+        height: 300px;
+    }
+
+    div.matka > #matka2 {
+        width: 450px;
+        height: 300px;
+    }
+
+div.kale {
+    font-family: 'Spartan', sans-serif;
+    background-color: #FFFFFF;
+    width: 945px;
+    margin-left: 60px;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+    div.kale > #kale1 {
+        width: auto;
+        height: 300px;
+        float: left;
+    }
+
+    div.kale > #kale2 {
+        width: 451px;
+        height: 300px;
+        float: right;
+    }
+
+div.makselo {
+    font-family: 'Spartan', sans-serif;
+    background-color: #FFFFFF;
+    width: 945px;
+    margin-left: 60px;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+    div.makselo > #selo1 {
+        width: auto;
+        height: 300px;
+    }
+
+    div.makselo > #food {
+        width: 451px;   
+        height: 300px;
+    }

@@ -229,6 +229,12 @@ input[type="range"] {
     display: block;
     width: 30%;
 }
+#btnClearFilters{
+    padding: 10px;
+}
+#idsubmit{
+    padding: 10px;
+}
 
 .btnSearch {
     background-color: #e4225f;
@@ -357,6 +363,92 @@ div.visit {
 }
 #sortSelect {
     font-family: 'Montserrat', sans-serif;
+    margin-left: 420px;
+    font-weight: normal;
+
+}
+#sortSelect {
+    font-size: 13px;
+    padding: 10px 8px 10px 14px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+    
+}
+
+ #sortSelect .select {
+        width: 120%;
+        background: url('arrow.png') no-repeat;
+        background-position: 80% center;
+    }
+
+#sortSelect .select select {
+        background: transparent;
+        line-height: 1;
+        border: 0;
+        padding: 0;
+        border-radius: 0;
+        width: 120%;
+        position: relative;
+        z-index: 10;
+        font-size: 1em;
+ }
+
+#searchInput {
+    font-size: 13px;
+    padding: 10px 8px 10px 14px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+    height: 30px;
+}
+input[type="text"] {
+    padding: 5px 10px;
+    line-height: 28px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+}
+
+.inp {
+    position: relative;
+    margin: auto;
+    width: 100%;
+    max-width: 280px;
+    border-radius: 3px;
+    overflow: hidden;
+    box-sizing: border-box;
+    margin-top: 20px;
+    display: inline;
+    font-family: 'Montserrat', sans-serif;
+}
+.focus-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba($dark,.05);
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+input #searchInput {
+    -webkit-appearance: none;
+    width: 100%;
+    border: 0;
+    font-family: 'Montserrat', sans-serif;
+    padding: 16px 12px 0 12px;
+    height: 56px;
+    font-size: 16px;
+    font-weight: 400;
+    background: rgba($dark,.02);
+    box-shadow: inset 0 -1px 0 rgba($dark,.3);
+    color: $dark;
+    transition: all .15s ease;
 }
 #searchInput {
     font-family: 'Montserrat', sans-serif;
@@ -539,8 +631,9 @@ sortFilterContainer > #checkbox {
     position: relative;
 }
 .aboutText {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 15px;
+    font-family: 'Spartan', sans-serif;
+    font-size: 17px;
+    font-weight: bold;
     background-color: #E6E6E6;
     width: 900px;
     border: 2px solid #E0B15E;

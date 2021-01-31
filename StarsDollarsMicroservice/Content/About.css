@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Montserrat:wght@100;700&family=Spartan:wght@800&display=swap');
+
+.header{
+    background-color: #132540;
+    text-align: center;
+    padding: 10px;
+    height: 80px;
+}
+body{
+    margin: 0;
+    background-size: cover;
+}
+a{
+    text-decoration: none;
+    color: #F6F6F6;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+    font-size: 18px;
+    padding: 11px;
+
+}
+div.header>#a{
+    margin-top: -150px;
+    margin-left: 450px;
+}
+div.header>#one{
+    background-color: #E0B15E;
+    width: 190px;
+    height: 220px;
+    margin-top: -50px;
+    margin-bottom: -110px;
+    margin-left: 50px
+}
+div.header>p{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 56px;
+    color: #F6F6F6;
+    background: transparent;
+    width: 500px;
+    margin-left: 60px;
+    margin-top: 90px;
+}
+div.body1>#two{
+    font-family: 'Spartan', sans-serif;
+    font-weight: 800;
+    font-size: 26px;
+    text-align: left;
+    color: #F6F6F6;
+    margin-left: 77px;
+    margin-top: 0px;
+
+
+}
+
+body{
+    background: #F6F6F6;
+}
